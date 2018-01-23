@@ -1,0 +1,392 @@
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.org.exalogic/xsms/" xmlns:intf="http://www.org.exalogic/xsms/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.org.exalogic/xsms/">
+    <!--
+    WSDL created by Apache Axis version: 1.4
+    Built on Apr 22, 2006 (06:55:48 PDT)
+    -->
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.org.exalogic/xsms/">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+            <complexType name="RegistrationRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="dateOfBirth" type="xsd:string"/>
+                    <element name="name" type="xsd:string"/>
+                    <element name="lastName" type="xsd:string"/>
+                    <element name="sex" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="RegistrationResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="password" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="GetBalanceRequest">
+                <sequence>
+                    <element name="userAccounts" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="GetBalanceResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="balance" type="xsd:float"/>
+                    <element name="bonus" type="xsd:float"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="VoucherPaymentRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="amount" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="VoucherPaymentResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="idVoucher" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="VoucherDepositRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="idVoucher" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="VoucherDepositResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="balance" type="xsd:float"/>
+                    <element name="amount" type="xsd:float"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="SellBetRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="bodySms" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="SellBetResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="idTicket" type="xsd:string"/>
+                    <element name="amount" type="xsd:float"/>
+                    <element name="winAmount" type="xsd:float"/>
+                    <element name="listTeam" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="CheckBetRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="CheckBetResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="idTicket" type="xsd:string"/>
+                    <element name="amount" type="xsd:float"/>
+                    <element name="winAmount" type="xsd:float"/>
+                    <element name="TicketState" type="xsd:int"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="WinNoticeRequest">
+                <sequence>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="timestamp" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ListWinTck">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="idTicket" type="xsd:string"/>
+                    <element name="winAmount" type="xsd:float"/>
+                </sequence>
+            </complexType>
+            <complexType name="WinNoticeResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="numberOfRecords" type="xsd:int"/>
+                    <element maxOccurs="unbounded" minOccurs="0" name="listTicket" type="impl:ListWinTck"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="HelpRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="command" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="HelpResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="helpText" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="SellBetKeyRequest">
+                <sequence>
+                    <element name="userAccount" type="xsd:string"/>
+                    <element name="bodySms" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="skinCode" type="xsd:string"/>
+                    <element name="keyBet" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="SellBetKeyResponse">
+                <sequence>
+                    <element name="resultCode" type="xsd:int"/>
+                    <element name="description" type="xsd:string"/>
+                    <element name="transactionId" type="xsd:string"/>
+                    <element name="idTicket" type="xsd:string"/>
+                    <element name="amount" type="xsd:float"/>
+                    <element name="winAmount" type="xsd:float"/>
+                    <element name="listTeam" type="xsd:string"/>
+                    <element name="signedData" type="xsd:string"/>
+                    <element name="signature" type="xsd:string"/>
+                </sequence>
+            </complexType>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="voucherDepositResponse">
+        <wsdl:part name="parameterOutput" type="impl:VoucherDepositResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="checkBetResponse">
+        <wsdl:part name="parameterOutput" type="impl:CheckBetResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="registrationResponse">
+        <wsdl:part name="parameterOutput" type="impl:RegistrationResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getBalanceResponse">
+        <wsdl:part name="parameterOutput" type="impl:GetBalanceResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="winNoticeRequest">
+        <wsdl:part name="parameterInput" type="impl:WinNoticeRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="sellBetKeyRequest">
+        <wsdl:part name="parameterInput" type="impl:SellBetKeyRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="registrationRequest">
+        <wsdl:part name="parameterInput" type="impl:RegistrationRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="helpRequest">
+        <wsdl:part name="parameterInput" type="impl:HelpRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="helpResponse">
+        <wsdl:part name="parameterOutput" type="impl:HelpResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="voucherPaymentRequest">
+        <wsdl:part name="parameterInput" type="impl:VoucherPaymentRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="sellBetKeyResponse">
+        <wsdl:part name="parameterOutput" type="impl:SellBetKeyResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="voucherDepositRequest">
+        <wsdl:part name="parameterInput" type="impl:VoucherDepositRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getBalanceRequest">
+        <wsdl:part name="parameterInput" type="impl:GetBalanceRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="checkBetRequest">
+        <wsdl:part name="parameterInput" type="impl:CheckBetRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="sellBetRequest">
+        <wsdl:part name="parameterInput" type="impl:SellBetRequest"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="voucherPaymentResponse">
+        <wsdl:part name="parameterOutput" type="impl:VoucherPaymentResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="sellBetResponse">
+        <wsdl:part name="parameterOutput" type="impl:SellBetResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="winNoticeResponse">
+        <wsdl:part name="parameterOutput" type="impl:WinNoticeResponse"></wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="xsms">
+        <wsdl:operation name="registration" parameterOrder="parameterInput">
+            <wsdl:input message="impl:registrationRequest" name="registrationRequest"></wsdl:input>
+            <wsdl:output message="impl:registrationResponse" name="registrationResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getBalance" parameterOrder="parameterInput">
+            <wsdl:input message="impl:getBalanceRequest" name="getBalanceRequest"></wsdl:input>
+            <wsdl:output message="impl:getBalanceResponse" name="getBalanceResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="voucherPayment" parameterOrder="parameterInput">
+            <wsdl:input message="impl:voucherPaymentRequest" name="voucherPaymentRequest"></wsdl:input>
+            <wsdl:output message="impl:voucherPaymentResponse" name="voucherPaymentResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="voucherDeposit" parameterOrder="parameterInput">
+            <wsdl:input message="impl:voucherDepositRequest" name="voucherDepositRequest"></wsdl:input>
+            <wsdl:output message="impl:voucherDepositResponse" name="voucherDepositResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sellBet" parameterOrder="parameterInput">
+            <wsdl:input message="impl:sellBetRequest" name="sellBetRequest"></wsdl:input>
+            <wsdl:output message="impl:sellBetResponse" name="sellBetResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="checkBet" parameterOrder="parameterInput">
+            <wsdl:input message="impl:checkBetRequest" name="checkBetRequest"></wsdl:input>
+            <wsdl:output message="impl:checkBetResponse" name="checkBetResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="winNotice" parameterOrder="parameterInput">
+            <wsdl:input message="impl:winNoticeRequest" name="winNoticeRequest"></wsdl:input>
+            <wsdl:output message="impl:winNoticeResponse" name="winNoticeResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="help" parameterOrder="parameterInput">
+            <wsdl:input message="impl:helpRequest" name="helpRequest"></wsdl:input>
+            <wsdl:output message="impl:helpResponse" name="helpResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sellBetKey" parameterOrder="parameterInput">
+            <wsdl:input message="impl:sellBetKeyRequest" name="sellBetKeyRequest"></wsdl:input>
+            <wsdl:output message="impl:sellBetKeyResponse" name="sellBetKeyResponse"></wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="xsmsSOAPSoapBinding" type="impl:xsms">
+        <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="registration">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/registration"/>
+            <wsdl:input name="registrationRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="registrationResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getBalance">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/getBalance"/>
+            <wsdl:input name="getBalanceRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getBalanceResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="voucherPayment">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/voucherPayment"/>
+            <wsdl:input name="voucherPaymentRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="voucherPaymentResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="voucherDeposit">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/voucherDeposit"/>
+            <wsdl:input name="voucherDepositRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="voucherDepositResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sellBet">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/sellBet"/>
+            <wsdl:input name="sellBetRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="sellBetResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="checkBet">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/checkBet"/>
+            <wsdl:input name="checkBetRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="checkBetResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="winNotice">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/winNotice"/>
+            <wsdl:input name="winNoticeRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="winNoticeResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="help">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/help"/>
+            <wsdl:input name="helpRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="helpResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sellBetKey">
+            <wsdlsoap:operation soapAction="http://www.org.exalogic/xsms/sellBetKey"/>
+            <wsdl:input name="sellBetKeyRequest">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="sellBetKeyResponse">
+                <wsdlsoap:body namespace="http://www.org.exalogic/xsms/" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="xsms">
+        <wsdl:port binding="impl:xsmsSOAPSoapBinding" name="xsmsSOAP">
+            <wsdlsoap:address location="http://test.sports4africa.com/tests4awallet/services/xsmsSOAP"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

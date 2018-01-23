@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <TournamentResponse>
+        <ReturnCode>
+            <Code>0</Code>
+            <Description>ESITO OK</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+        <Tournament>
+            <CodTournament>1</CodTournament>
+            <CodSport>1</CodSport>
+            <Acronym>Ligue 1</Acronym>
+            <Description>France D1</Description>
+            <FlagComplementare>false</FlagComplementare>
+        </Tournament>
+        <Tournament>
+            <CodTournament>2</CodTournament>
+            <CodSport>1</CodSport>
+            <Acronym>Liga</Acronym>
+            <Description>Liga</Description>
+            <FlagComplementare>false</FlagComplementare>
+        </Tournament>
+        <TransactionID>1393843971185</TransactionID>
+    </TournamentResponse>
+</ServicesPSQF>

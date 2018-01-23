@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <SellRequest>
+        <CodConc>1000</CodConc>
+        <CodDiritto>1000</CodDiritto>
+        <IdTerminal>0</IdTerminal>
+        <Account>
+            <AccountId>scommessina31</AccountId>
+            <CodConc>1000</CodConc>
+            <CodDiritto>1000</CodDiritto>
+            <Type>14</Type>
+        </Account>
+        <TransactionID>5108658320</TransactionID>
+        <AmountCoupon>200</AmountCoupon>
+        <AmountWin>3263</AmountWin>
+        <BetCoupon>
+            <CodPal>14693</CodPal>
+            <CodEvent>9</CodEvent>
+            <CodBet>3</CodBet>
+            <CodDraw>1</CodDraw>
+            <Odd>245</Odd>
+        </BetCoupon>
+        <BetCoupon>
+            <CodPal>14685</CodPal>
+            <CodEvent>12</CodEvent>
+            <CodBet>3</CodBet>
+            <CodDraw>1</CodDraw>
+            <Odd>185</Odd>
+        </BetCoupon>
+        <BetCoupon>
+            <CodPal>14709</CodPal>
+            <CodEvent>8</CodEvent>
+            <CodBet>3</CodBet>
+            <CodDraw>1</CodDraw>
+            <Odd>360</Odd>
+        </BetCoupon>
+    </SellRequest>
+</ServicesPSQF>
+
+date=2016-10-17 10:36:44|json={"alias":"ludwinmtnci","msisdn":"0022509256638","mise":"200","probable":"500000","pari":[{"idmatch":"1","id_genre":"1","cote":"56","type":"equipe1"},{"idmatch":"2","id_genre":"3","cote":"45","type":"autre"},{"idmatch":"3","id_genre":"3","cote":"45","type":"3-3"}]}|xmlinput=<?xml version="1.0" encoding="utf-8"?>
+<ServicesPSQF>
+    <SellRequest>
+        <IdTerminal>1000</IdTerminal>
+        <Account>
+            <AccountId>USSD0022509256638</AccountId>
+            <CodConc>299</CodConc>
+            <CodDiritto>720</CodDiritto>
+            <Type>14</Type>
+        </Account>
+        <TransactionID>52</TransactionID>
+        <AmountCoupon>200</AmountCoupon>
+        <AmountWin>1000</AmountWin>
+        <BetCoupon>
+            <CodPal>1643</CodPal>
+            <CodEvent>148</CodEvent>
+            <CodBet>14</CodBet>
+            <CodDraw>1</CodDraw>
+            <Odd>376</Odd>
+        </BetCoupon>
+        <BetCoupon>
+            <CodPal>1643</CodPal>
+            <CodEvent>149</CodEvent>
+            <CodBet>7</CodBet>
+            <CodDraw>26</CodDraw>
+            <Odd>2265</Odd>
+        </BetCoupon>
+        <BetCoupon>
+            <CodPal>1643</CodPal>
+            <CodEvent>150</CodEvent>
+            <CodBet>7</CodBet>
+            <CodDraw>24</CodDraw>
+            <Odd>4694</Odd>
+        </BetCoupon>
+    </SellRequest>
+</ServicesPSQF>
+|xmloutput=<?xml version="1.0" encoding="UTF-8"?><ServicesPSQF>
+    <SellResponse>
+        <ReturnCode>
+            <Code>-102</Code>
+            <Description>Generic Error</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+    </SellResponse>
+</ServicesPSQF>^M
+
+
+date=2016-10-17 15:30:24|json={"alias":"ludwinmtnci","msisdn":"0022509256638","mise":"1000","pari":[{"idmatch":"1","id_genre":"1","cote":"376","type":"equipe1"}]}|xmlinput=<?xml version="1.0" encoding="utf-8"?>
+<ServicesPSQF>
+    <SellRequest>
+        <CodConc>299</CodConc>
+        <CodDiritto>720</CodDiritto>
+        <IdTerminal>503</IdTerminal>
+        <Account>
+            <AccountId>USSD0022509256638</AccountId>
+            <CodConc>299</CodConc>
+            <CodDiritto>720</CodDiritto>
+            <Type>14</Type>
+        </Account>
+        <TransactionID>69</TransactionID>
+        <AmountCoupon>1000</AmountCoupon>
+        <AmountWin>252490</AmountWin>
+        <BetCoupon>
+            <CodPal>1643</CodPal>
+            <CodEvent>150</CodEvent>
+            <CodBet>14</CodBet>
+            <CodDraw>1</CodDraw>
+            <Odd>25249</Odd>
+        </BetCoupon>
+    </SellRequest>
+</ServicesPSQF>
+|xmloutput=<?xml version="1.0" encoding="UTF-8"?><ServicesPSQF>
+    <SellResponse>
+        <ReturnCode>
+            <Code>-5105</Code>
+            <Description>EVENEMENT NON AUTORISE A LA VENTE</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+        <TransactionID>69</TransactionID>
+    </SellResponse>
+</ServicesPSQF>^M
+
+
+date=2016-10-17 15:33:27|json={"alias":"ludwinmtnci","msisdn":"0022509256638","mise":"1000","pari":[{"idmatch":"2","id_genre":"1","cote":"376","type":"equipe1"}]}|xmlinput=<?xml version="1.0" encoding="utf-8"?>
+<ServicesPSQF>
+    <SellRequest>
+        <CodConc>299</CodConc>
+        <CodDiritto>720</CodDiritto>
+        <IdTerminal>503</IdTerminal>
+        <Account>
+            <AccountId>USSD0022509256638</AccountId>
+            <CodConc>299</CodConc>
+            <CodDiritto>720</CodDiritto>
+            <Type>14</Type>
+        </Account>
+        <TransactionID>70</TransactionID>
+        <AmountCoupon>1000</AmountCoupon>
+        <AmountWin>252060</AmountWin>
+        <BetCoupon>
+            <CodPal>1643</CodPal>
+            <CodEvent>149</CodEvent>
+            <CodBet>14</CodBet>
+            <CodDraw>1</CodDraw>
+            <Odd>25206</Odd>
+        </BetCoupon>
+    </SellRequest>
+</ServicesPSQF>
+|xmloutput=<?xml version="1.0" encoding="UTF-8"?><ServicesPSQF>
+    <SellResponse>
+        <ReturnCode>
+            <Code>0</Code>
+            <Description>RESULTAT OK</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+        <TicketSogei>B068088396FFE1B47BF0</TicketSogei>
+        <TimeStamp>20161017 15:33:26</TimeStamp>
+        <TransactionID>70</TransactionID>
+        <AmountWin>2060</AmountWin>
+    </SellResponse>
+</ServicesPSQF>^M
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <SellResponse>
+        <ReturnCode>
+            <Code>-102</Code>
+            <Description>Generic Error</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+    </SellResponse>
+</ServicesPSQF>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <SellResponse>
+        <ReturnCode>
+            <Code>-5105</Code>
+            <Description>EVENEMENT NON AUTORISE A LA VENTE</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+        <TransactionID>69</TransactionID>
+    </SellResponse>
+</ServicesPSQF>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <SellResponse>
+        <ReturnCode>
+            <Code>0</Code>
+            <Description>RESULTAT OK</Description>
+            <FlgRetry>false</FlgRetry>
+        </ReturnCode>
+        <TicketSogei>B068088396FFE1B47BF0</TicketSogei>
+        <TimeStamp>20161017 15:33:26</TimeStamp>
+        <TransactionID>70</TransactionID>
+        <AmountWin>2060</AmountWin>
+    </SellResponse>
+</ServicesPSQF>
+

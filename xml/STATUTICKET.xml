@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><riepilogo_dati_biglietto>
+    <stato_biglietto>PAYABLE</stato_biglietto>
+    <data_vendita_biglietto>20161017 15:33:26</data_vendita_biglietto>
+    <prezzo_vendita_biglietto>1000</prezzo_vendita_biglietto>
+    <importo_vincita_biglietto>2060</importo_vincita_biglietto>
+    <nr_terminale>503</nr_terminale>
+    <num_elementi>0</num_elementi>
+    <elementi_biglietto>
+        <data>20161017 18:45:00</data>
+        <pal>1643</pal>
+        <avv>149</avv>
+        <descr_avv>EIBAR - OSASUNA</descr_avv>
+        <stato_ele>AP</stato_ele>
+        <descr_scomm>r sultat mi-temps</descr_scomm>
+        <descr_esito>1</descr_esito>
+        <quota>206</quota>
+        <handicap>0</handicap>
+        <partecipa_vincita>1</partecipa_vincita>
+        <esito_vin>1</esito_vin>
+        <fissa>1</fissa>
+        <quota_pag>206</quota_pag>
+        <scom>14</scom>
+    </elementi_biglietto>
+    <num_elementi_sistema>0</num_elementi_sistema>
+    <id_cn>299</id_cn>
+    <id_pvend>720</id_pvend>
+</riepilogo_dati_biglietto>
+
+
+<riepilogo_dati_biglietto>  
+    <stato_biglietto>PAYE</stato_biglietto> ==> "status of the ticket ( payable, payer, perdant )
+    <data_vendita_biglietto>20160226 15:55:42</data_vendita_biglietto> ==> "date of sale"
+    <prezzo_vendita_biglietto>5600</prezzo_vendita_biglietto> ==> "stake "
+    <importo_vincita_biglietto>33370</importo_vincita_biglietto> ==>" winning"
+    <nr_terminale>201</nr_terminale> ==> "number of terminal"
+    <num_elementi>0</num_elementi> don't use
+    <elementi_biglietto>
+        <data>20160227 15:00:00</data> ==> "date de payement "
+        <pal>1609</pal> ==> " programme"
+        <avv>532</avv> ==> " event "
+        <descr_avv>LEICESTER - NORWICH</descr_avv> desc_match
+        <stato_ele>AP</stato_ele> status_element
+        <descr_scomm>r sultat final 1n2</descr_scomm> ==> "desc market" 
+        <descr_esito>2</descr_esito> ==> "market select"
+        <quota>596</quota> ==> " odds "
+        <handicap>0</handicap> ==> " handicap"
+        <partecipa_vincita>1</partecipa_vincita>  ---> use for system you have the explication of the system API document sent .
+        <esito_vin>2</esito_vin> ==> "winning choice"
+        <fissa>1</fissa> ---> use for system now they not use system
+        <quota_pag>596</quota_pag> ==> "total odds"
+        <scom>3</scom> ==>"market code"
+    </elementi_biglietto>
+    <num_elementi_sistema>0</num_elementi_sistema> " system number of elements"
+    <id_cn>299</id_cn> ==> "code console"
+    <id_pvend>595</id_pvend> ==> " code PDV"
+</riepilogo_dati_biglietto>

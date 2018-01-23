@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <SportRequest>
+        <TransactionID>1393843550244</TransactionID>
+        <CodSport>1</CodSport>
+        <Language>FR</Language>
+    </SportRequest>
+</ServicesPSQF>

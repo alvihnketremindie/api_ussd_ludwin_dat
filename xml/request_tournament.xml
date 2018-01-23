@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServicesPSQF>
+    <TournamentRequest>
+        <CodSport>1</CodSport>
+        <CodTournament>1</CodTournament>
+        <TransactionID>1393843971185</TransactionID>
+        <Language>FR</Language>
+    </TournamentRequest>
+</ServicesPSQF>
